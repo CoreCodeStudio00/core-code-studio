@@ -1,0 +1,370 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b1220; /* dark navy */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Main container */
+.main {
+    text-align: center;
+}
+
+    /* Title */
+    .main h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    /* Subtitle */
+    .main p {
+        font-size: 1.2rem;
+        color: #4aa3ff; /* blue accent */
+    }
+.subtitle {
+    margin-bottom: 40px;
+}
+
+/* Sections */
+.section {
+    margin: 40px 0;
+    width :100%;
+    max-width:420px;
+    padding:24px;
+    box-sizing:border-box ;
+    text-align: center;
+}
+
+    .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .section ul,
+    .section ol {
+        list-style-position: inside;
+        color: #d1d5db;
+    }
+
+    .section li {
+        margin: 8px 0;
+    }
+
+    
+/* Call to action */
+.cta {
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #4aa3ff;
+    border-radius: 8px;
+}
+
+    .cta p {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+/* Page layout */
+.page {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+/* Centered content with max width */
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+    /* Make the title area centered */
+    .main h1,
+    .subtitle {
+        text-align: center;
+    }
+
+/* Better spacing */
+.section {
+    padding: 24px;
+    box-sizing:border-box;
+    position :relative;
+}
+
+    .section::before {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+    }
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #4aa3ff;
+    color: #0b1220;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    /* Button hover */
+    .btn:hover {
+        filter: brightness(1.05);
+    }
+
+/* CTA layout */
+.cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-links {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+    .cta-links a {
+        color: #d1d5db;
+        text-decoration: none;
+    }
+
+        .cta-links a:hover {
+            text-decoration: underline;
+        }
+
+    .cta-links span {
+        margin: 0 8px;
+        opacity: 0.7;
+    }
+/* Hero section */
+.hero {
+    text-align: center;
+    margin: 60px 0 50px 0;
+}
+
+    .hero h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+        color: #4aa3ff;
+    }
+
+.header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+/* Hero logo */
+.hero-logo {
+    display :block;
+    width:220px;
+    height:auto;
+    margin: 0 auto 24px auto;
+    object-fit:contain;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .section .reveal {
+        max-height: 500px;
+        opacity: 1;
+        transform: none;
+    }
+}
+/* Hover reveal animation */
+.section {
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+    .section:hover {
+        transform: translateY(-4px);
+        border-color: rgba(74, 163, 255, 0.6);
+        background: rgba(255, 255, 255, 0.045);
+    }
+
+    /* Hidden by default */
+    .section .reveal {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-6px);
+        transition: max-height 240ms ease, opacity 240ms ease, transform 240ms ease;
+    }
+
+    /* Reveal on hover */
+    .section:hover .reveal {
+        max-height: 500px; /* big enough for the list */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Optional: nicer spacing when revealed */
+    .section .reveal ul,
+    .section .reveal ol {
+        margin-top: 10px;
+    }
+.how-wrapper {
+    display :flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    margin-top: 60px;
+}
+.how-wrapper .section{
+    margin :0 auto;
+    text-align: center;
+    transform: translateX(220px);
+}
+.footer {
+    margin-top: 80px;
+    padding: 24px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .sections, .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+@media (max-width: 768px) {
+    /* turn OFF hover reveal effects on mobile */
+    .section:hover .reveal {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    /* default = closed on mobile */
+    .section .reveal {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-6px);
+        transition: max-height 240ms ease, opacity 240ms ease, transform 240ms ease;
+    }
+
+    /* open state (toggled by JS) */
+    .section.open .reveal {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .page {
+        padding: 36px 16px;
+    }
+
+    .hero-logo {
+        width: 140px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 420px;
+        padding: 16px 18px;
+        font-size: 1.05rem;
+    }
+}
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+
+        body {
+            text-align: center;
+        }
+    }
+    @media (max-width: 768px) {
+
+        .section {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+
+        .section ul,
+        .section ol {
+            padding-left: 0;
+            list-style-position: inside;
+            text-align: center;
+        }
+    }
+    @media (max-width: 768px) {
+
+        .how-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .how-wrapper .section {
+                transform: none; /* VERY IMPORTANT */
+            }
+    }
+    @media (max-width: 768px) {
+
+        .hero-logo {
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+        }
+    }
+    @media (max-width: 768px) {
+
+        .cta {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+        }
+    }
+
+
+}
+
